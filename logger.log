@@ -1,0 +1,440 @@
+2022-07-29 12:58:00,021 ---------- Start Log -----------
+2022-07-29 12:58:00,173 Data Preperation adding RUL column, factor: 0
+2022-07-29 12:58:00,197 Data preped, Returning Data
+2022-07-29 12:58:02,549 ##### Running LSTM
+2022-07-29 12:58:02,549 ##### LSTM Preprocessing Beginning
+2022-07-29 12:58:02,550 Setup train data
+2022-07-29 12:58:02,550 Create additional data columns: Creating RUL Data Bins
+2022-07-29 12:58:02,551 Bin Sizes: 0-15, 15-30, >30
+2022-07-29 12:58:02,551 Data Normalization, Min-Max
+2022-07-29 12:58:02,573 Finish Setup train data
+2022-07-29 12:58:02,573 Train Data Shape: (24239, 24)
+2022-07-29 12:58:02,573 Setup test data
+2022-07-29 12:58:02,573 Data Normalization, Min-Max
+2022-07-29 12:58:02,573 Max column present in test dataset, Dropping Columns
+2022-07-29 12:58:02,589 Prepare RUL for test data
+2022-07-29 12:58:02,590 Calculate Totat Max RUL
+2022-07-29 12:58:02,593 Calculate RUL for Test Data
+2022-07-29 12:58:02,602 Create additional data columns, Creat RUL Data Bins
+2022-07-29 12:58:02,609 Bin Sizes: 0-15, 15-30, >30
+2022-07-29 12:58:02,610 Finish Setup test data
+2022-07-29 12:58:02,610 Test Data Shape: (16596, 24)
+2022-07-29 12:58:02,610 Define Sequence cols and Sequence length
+2022-07-29 12:58:02,610 Create Sequence validation list for unit_number 1
+2022-07-29 12:58:02,611 Generating Sequence for ID: 1
+2022-07-29 12:58:02,611 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,611 Validation Sequence Length: 209
+2022-07-29 12:58:02,611 Creating Sequence for all train data
+2022-07-29 12:58:02,612 Generating Sequence for ID: 1
+2022-07-29 12:58:02,612 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,613 Generating Sequence for ID: 2
+2022-07-29 12:58:02,613 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,615 Generating Sequence for ID: 3
+2022-07-29 12:58:02,615 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,616 Generating Sequence for ID: 4
+2022-07-29 12:58:02,616 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,617 Generating Sequence for ID: 5
+2022-07-29 12:58:02,617 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,618 Generating Sequence for ID: 6
+2022-07-29 12:58:02,618 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,619 Generating Sequence for ID: 7
+2022-07-29 12:58:02,619 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,620 Generating Sequence for ID: 8
+2022-07-29 12:58:02,620 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,621 Generating Sequence for ID: 9
+2022-07-29 12:58:02,621 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,622 Generating Sequence for ID: 11
+2022-07-29 12:58:02,622 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,623 Generating Sequence for ID: 12
+2022-07-29 12:58:02,623 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,624 Generating Sequence for ID: 13
+2022-07-29 12:58:02,624 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,625 Generating Sequence for ID: 14
+2022-07-29 12:58:02,625 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,626 Generating Sequence for ID: 15
+2022-07-29 12:58:02,626 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,627 Generating Sequence for ID: 16
+2022-07-29 12:58:02,627 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,629 Generating Sequence for ID: 17
+2022-07-29 12:58:02,629 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,630 Generating Sequence for ID: 18
+2022-07-29 12:58:02,630 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,631 Generating Sequence for ID: 19
+2022-07-29 12:58:02,631 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,632 Generating Sequence for ID: 20
+2022-07-29 12:58:02,632 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,633 Generating Sequence for ID: 21
+2022-07-29 12:58:02,633 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,634 Generating Sequence for ID: 22
+2022-07-29 12:58:02,634 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,635 Generating Sequence for ID: 23
+2022-07-29 12:58:02,635 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,636 Generating Sequence for ID: 24
+2022-07-29 12:58:02,636 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,637 Generating Sequence for ID: 25
+2022-07-29 12:58:02,637 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,638 Generating Sequence for ID: 26
+2022-07-29 12:58:02,638 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,639 Generating Sequence for ID: 27
+2022-07-29 12:58:02,639 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,640 Generating Sequence for ID: 28
+2022-07-29 12:58:02,641 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,641 Generating Sequence for ID: 29
+2022-07-29 12:58:02,642 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,643 Generating Sequence for ID: 30
+2022-07-29 12:58:02,643 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,644 Generating Sequence for ID: 31
+2022-07-29 12:58:02,644 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,645 Generating Sequence for ID: 32
+2022-07-29 12:58:02,645 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,646 Generating Sequence for ID: 33
+2022-07-29 12:58:02,646 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,647 Generating Sequence for ID: 34
+2022-07-29 12:58:02,647 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,648 Generating Sequence for ID: 35
+2022-07-29 12:58:02,648 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,649 Generating Sequence for ID: 36
+2022-07-29 12:58:02,649 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,650 Generating Sequence for ID: 37
+2022-07-29 12:58:02,650 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,651 Generating Sequence for ID: 38
+2022-07-29 12:58:02,651 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,652 Generating Sequence for ID: 39
+2022-07-29 12:58:02,652 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,653 Generating Sequence for ID: 40
+2022-07-29 12:58:02,653 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,654 Generating Sequence for ID: 41
+2022-07-29 12:58:02,654 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,655 Generating Sequence for ID: 42
+2022-07-29 12:58:02,656 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,657 Generating Sequence for ID: 43
+2022-07-29 12:58:02,657 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,658 Generating Sequence for ID: 44
+2022-07-29 12:58:02,658 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,659 Generating Sequence for ID: 45
+2022-07-29 12:58:02,659 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,660 Generating Sequence for ID: 46
+2022-07-29 12:58:02,660 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,661 Generating Sequence for ID: 47
+2022-07-29 12:58:02,661 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,662 Generating Sequence for ID: 48
+2022-07-29 12:58:02,662 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,663 Generating Sequence for ID: 49
+2022-07-29 12:58:02,663 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,664 Generating Sequence for ID: 50
+2022-07-29 12:58:02,664 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,665 Generating Sequence for ID: 51
+2022-07-29 12:58:02,665 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,666 Generating Sequence for ID: 52
+2022-07-29 12:58:02,666 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,667 Generating Sequence for ID: 53
+2022-07-29 12:58:02,667 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,668 Generating Sequence for ID: 54
+2022-07-29 12:58:02,668 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,669 Generating Sequence for ID: 55
+2022-07-29 12:58:02,669 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,671 Generating Sequence for ID: 56
+2022-07-29 12:58:02,671 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,672 Generating Sequence for ID: 57
+2022-07-29 12:58:02,672 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,673 Generating Sequence for ID: 58
+2022-07-29 12:58:02,673 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,674 Generating Sequence for ID: 59
+2022-07-29 12:58:02,674 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,675 Generating Sequence for ID: 60
+2022-07-29 12:58:02,675 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,676 Generating Sequence for ID: 61
+2022-07-29 12:58:02,676 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,677 Generating Sequence for ID: 62
+2022-07-29 12:58:02,677 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,678 Generating Sequence for ID: 63
+2022-07-29 12:58:02,678 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,679 Generating Sequence for ID: 64
+2022-07-29 12:58:02,679 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,680 Generating Sequence for ID: 65
+2022-07-29 12:58:02,680 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,681 Generating Sequence for ID: 66
+2022-07-29 12:58:02,681 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,682 Generating Sequence for ID: 67
+2022-07-29 12:58:02,682 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,683 Generating Sequence for ID: 68
+2022-07-29 12:58:02,683 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,684 Generating Sequence for ID: 69
+2022-07-29 12:58:02,684 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,685 Generating Sequence for ID: 70
+2022-07-29 12:58:02,685 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,686 Generating Sequence for ID: 71
+2022-07-29 12:58:02,686 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,687 Generating Sequence for ID: 72
+2022-07-29 12:58:02,688 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,689 Generating Sequence for ID: 73
+2022-07-29 12:58:02,689 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,690 Generating Sequence for ID: 74
+2022-07-29 12:58:02,690 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,691 Generating Sequence for ID: 75
+2022-07-29 12:58:02,691 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,692 Generating Sequence for ID: 76
+2022-07-29 12:58:02,692 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,693 Generating Sequence for ID: 77
+2022-07-29 12:58:02,693 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,694 Generating Sequence for ID: 78
+2022-07-29 12:58:02,694 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,695 Generating Sequence for ID: 79
+2022-07-29 12:58:02,695 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,696 Generating Sequence for ID: 80
+2022-07-29 12:58:02,696 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,697 Generating Sequence for ID: 81
+2022-07-29 12:58:02,697 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,698 Generating Sequence for ID: 82
+2022-07-29 12:58:02,698 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,699 Generating Sequence for ID: 83
+2022-07-29 12:58:02,699 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,700 Generating Sequence for ID: 84
+2022-07-29 12:58:02,700 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,701 Generating Sequence for ID: 85
+2022-07-29 12:58:02,701 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,702 Generating Sequence for ID: 86
+2022-07-29 12:58:02,702 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,703 Generating Sequence for ID: 87
+2022-07-29 12:58:02,703 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,704 Generating Sequence for ID: 88
+2022-07-29 12:58:02,704 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,705 Generating Sequence for ID: 89
+2022-07-29 12:58:02,705 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,706 Generating Sequence for ID: 90
+2022-07-29 12:58:02,706 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,707 Generating Sequence for ID: 91
+2022-07-29 12:58:02,707 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,708 Generating Sequence for ID: 92
+2022-07-29 12:58:02,708 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,709 Generating Sequence for ID: 93
+2022-07-29 12:58:02,709 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,710 Generating Sequence for ID: 94
+2022-07-29 12:58:02,710 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,712 Generating Sequence for ID: 95
+2022-07-29 12:58:02,712 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,713 Generating Sequence for ID: 96
+2022-07-29 12:58:02,713 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,714 Generating Sequence for ID: 97
+2022-07-29 12:58:02,714 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,715 Generating Sequence for ID: 98
+2022-07-29 12:58:02,715 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,716 Generating Sequence for ID: 99
+2022-07-29 12:58:02,716 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,717 Generating Sequence for ID: 100
+2022-07-29 12:58:02,717 Data sequencing: Sequence Length:50, Sequence Cols: ['Acheck', 'Bcheck', 'Ccheck', 'sensor1', 'sensor10', 'sensor11', 'sensor12', 'sensor13', 'sensor14', 'sensor18', 'sensor2', 'sensor20', 'sensor23', 'sensor24', 'sensor5', 'sensor6', 'sensor7', 'sensor9', 'unit_number', 'time_in_cycles', 'cycle_norm']
+2022-07-29 12:58:02,863 Generate labels for train data
+2022-07-29 12:58:02,864 Generate Labels for a given sequence
+2022-07-29 12:58:02,864 Data Set ID: 1
+2022-07-29 12:58:02,865 Generate Labels for a given sequence
+2022-07-29 12:58:02,865 Data Set ID: 2
+2022-07-29 12:58:02,866 Generate Labels for a given sequence
+2022-07-29 12:58:02,866 Data Set ID: 3
+2022-07-29 12:58:02,867 Generate Labels for a given sequence
+2022-07-29 12:58:02,867 Data Set ID: 4
+2022-07-29 12:58:02,868 Generate Labels for a given sequence
+2022-07-29 12:58:02,868 Data Set ID: 5
+2022-07-29 12:58:02,869 Generate Labels for a given sequence
+2022-07-29 12:58:02,869 Data Set ID: 6
+2022-07-29 12:58:02,869 Generate Labels for a given sequence
+2022-07-29 12:58:02,870 Data Set ID: 7
+2022-07-29 12:58:02,870 Generate Labels for a given sequence
+2022-07-29 12:58:02,870 Data Set ID: 8
+2022-07-29 12:58:02,871 Generate Labels for a given sequence
+2022-07-29 12:58:02,871 Data Set ID: 9
+2022-07-29 12:58:02,872 Generate Labels for a given sequence
+2022-07-29 12:58:02,872 Data Set ID: 11
+2022-07-29 12:58:02,873 Generate Labels for a given sequence
+2022-07-29 12:58:02,873 Data Set ID: 12
+2022-07-29 12:58:02,874 Generate Labels for a given sequence
+2022-07-29 12:58:02,874 Data Set ID: 13
+2022-07-29 12:58:02,874 Generate Labels for a given sequence
+2022-07-29 12:58:02,875 Data Set ID: 14
+2022-07-29 12:58:02,875 Generate Labels for a given sequence
+2022-07-29 12:58:02,875 Data Set ID: 15
+2022-07-29 12:58:02,876 Generate Labels for a given sequence
+2022-07-29 12:58:02,876 Data Set ID: 16
+2022-07-29 12:58:02,877 Generate Labels for a given sequence
+2022-07-29 12:58:02,877 Data Set ID: 17
+2022-07-29 12:58:02,878 Generate Labels for a given sequence
+2022-07-29 12:58:02,878 Data Set ID: 18
+2022-07-29 12:58:02,879 Generate Labels for a given sequence
+2022-07-29 12:58:02,879 Data Set ID: 19
+2022-07-29 12:58:02,879 Generate Labels for a given sequence
+2022-07-29 12:58:02,880 Data Set ID: 20
+2022-07-29 12:58:02,880 Generate Labels for a given sequence
+2022-07-29 12:58:02,880 Data Set ID: 21
+2022-07-29 12:58:02,881 Generate Labels for a given sequence
+2022-07-29 12:58:02,881 Data Set ID: 22
+2022-07-29 12:58:02,882 Generate Labels for a given sequence
+2022-07-29 12:58:02,882 Data Set ID: 23
+2022-07-29 12:58:02,883 Generate Labels for a given sequence
+2022-07-29 12:58:02,883 Data Set ID: 24
+2022-07-29 12:58:02,884 Generate Labels for a given sequence
+2022-07-29 12:58:02,884 Data Set ID: 25
+2022-07-29 12:58:02,884 Generate Labels for a given sequence
+2022-07-29 12:58:02,885 Data Set ID: 26
+2022-07-29 12:58:02,885 Generate Labels for a given sequence
+2022-07-29 12:58:02,885 Data Set ID: 27
+2022-07-29 12:58:02,886 Generate Labels for a given sequence
+2022-07-29 12:58:02,886 Data Set ID: 28
+2022-07-29 12:58:02,887 Generate Labels for a given sequence
+2022-07-29 12:58:02,887 Data Set ID: 29
+2022-07-29 12:58:02,888 Generate Labels for a given sequence
+2022-07-29 12:58:02,888 Data Set ID: 30
+2022-07-29 12:58:02,889 Generate Labels for a given sequence
+2022-07-29 12:58:02,889 Data Set ID: 31
+2022-07-29 12:58:02,889 Generate Labels for a given sequence
+2022-07-29 12:58:02,889 Data Set ID: 32
+2022-07-29 12:58:02,890 Generate Labels for a given sequence
+2022-07-29 12:58:02,890 Data Set ID: 33
+2022-07-29 12:58:02,891 Generate Labels for a given sequence
+2022-07-29 12:58:02,891 Data Set ID: 34
+2022-07-29 12:58:02,892 Generate Labels for a given sequence
+2022-07-29 12:58:02,892 Data Set ID: 35
+2022-07-29 12:58:02,893 Generate Labels for a given sequence
+2022-07-29 12:58:02,893 Data Set ID: 36
+2022-07-29 12:58:02,893 Generate Labels for a given sequence
+2022-07-29 12:58:02,894 Data Set ID: 37
+2022-07-29 12:58:02,894 Generate Labels for a given sequence
+2022-07-29 12:58:02,895 Data Set ID: 38
+2022-07-29 12:58:02,895 Generate Labels for a given sequence
+2022-07-29 12:58:02,895 Data Set ID: 39
+2022-07-29 12:58:02,896 Generate Labels for a given sequence
+2022-07-29 12:58:02,896 Data Set ID: 40
+2022-07-29 12:58:02,897 Generate Labels for a given sequence
+2022-07-29 12:58:02,897 Data Set ID: 41
+2022-07-29 12:58:02,898 Generate Labels for a given sequence
+2022-07-29 12:58:02,898 Data Set ID: 42
+2022-07-29 12:58:02,898 Generate Labels for a given sequence
+2022-07-29 12:58:02,899 Data Set ID: 43
+2022-07-29 12:58:02,899 Generate Labels for a given sequence
+2022-07-29 12:58:02,899 Data Set ID: 44
+2022-07-29 12:58:02,900 Generate Labels for a given sequence
+2022-07-29 12:58:02,900 Data Set ID: 45
+2022-07-29 12:58:02,901 Generate Labels for a given sequence
+2022-07-29 12:58:02,901 Data Set ID: 46
+2022-07-29 12:58:02,902 Generate Labels for a given sequence
+2022-07-29 12:58:02,902 Data Set ID: 47
+2022-07-29 12:58:02,902 Generate Labels for a given sequence
+2022-07-29 12:58:02,903 Data Set ID: 48
+2022-07-29 12:58:02,903 Generate Labels for a given sequence
+2022-07-29 12:58:02,903 Data Set ID: 49
+2022-07-29 12:58:02,904 Generate Labels for a given sequence
+2022-07-29 12:58:02,904 Data Set ID: 50
+2022-07-29 12:58:02,905 Generate Labels for a given sequence
+2022-07-29 12:58:02,905 Data Set ID: 51
+2022-07-29 12:58:02,906 Generate Labels for a given sequence
+2022-07-29 12:58:02,906 Data Set ID: 52
+2022-07-29 12:58:02,906 Generate Labels for a given sequence
+2022-07-29 12:58:02,907 Data Set ID: 53
+2022-07-29 12:58:02,907 Generate Labels for a given sequence
+2022-07-29 12:58:02,907 Data Set ID: 54
+2022-07-29 12:58:02,908 Generate Labels for a given sequence
+2022-07-29 12:58:02,908 Data Set ID: 55
+2022-07-29 12:58:02,909 Generate Labels for a given sequence
+2022-07-29 12:58:02,909 Data Set ID: 56
+2022-07-29 12:58:02,910 Generate Labels for a given sequence
+2022-07-29 12:58:02,910 Data Set ID: 57
+2022-07-29 12:58:02,911 Generate Labels for a given sequence
+2022-07-29 12:58:02,911 Data Set ID: 58
+2022-07-29 12:58:02,911 Generate Labels for a given sequence
+2022-07-29 12:58:02,912 Data Set ID: 59
+2022-07-29 12:58:02,912 Generate Labels for a given sequence
+2022-07-29 12:58:02,912 Data Set ID: 60
+2022-07-29 12:58:02,913 Generate Labels for a given sequence
+2022-07-29 12:58:02,913 Data Set ID: 61
+2022-07-29 12:58:02,914 Generate Labels for a given sequence
+2022-07-29 12:58:02,914 Data Set ID: 62
+2022-07-29 12:58:02,915 Generate Labels for a given sequence
+2022-07-29 12:58:02,915 Data Set ID: 63
+2022-07-29 12:58:02,915 Generate Labels for a given sequence
+2022-07-29 12:58:02,915 Data Set ID: 64
+2022-07-29 12:58:02,916 Generate Labels for a given sequence
+2022-07-29 12:58:02,916 Data Set ID: 65
+2022-07-29 12:58:02,917 Generate Labels for a given sequence
+2022-07-29 12:58:02,917 Data Set ID: 66
+2022-07-29 12:58:02,918 Generate Labels for a given sequence
+2022-07-29 12:58:02,918 Data Set ID: 67
+2022-07-29 12:58:02,919 Generate Labels for a given sequence
+2022-07-29 12:58:02,919 Data Set ID: 68
+2022-07-29 12:58:02,919 Generate Labels for a given sequence
+2022-07-29 12:58:02,919 Data Set ID: 69
+2022-07-29 12:58:02,920 Generate Labels for a given sequence
+2022-07-29 12:58:02,920 Data Set ID: 70
+2022-07-29 12:58:02,921 Generate Labels for a given sequence
+2022-07-29 12:58:02,921 Data Set ID: 71
+2022-07-29 12:58:02,922 Generate Labels for a given sequence
+2022-07-29 12:58:02,922 Data Set ID: 72
+2022-07-29 12:58:02,923 Generate Labels for a given sequence
+2022-07-29 12:58:02,923 Data Set ID: 73
+2022-07-29 12:58:02,923 Generate Labels for a given sequence
+2022-07-29 12:58:02,923 Data Set ID: 74
+2022-07-29 12:58:02,924 Generate Labels for a given sequence
+2022-07-29 12:58:02,924 Data Set ID: 75
+2022-07-29 12:58:02,925 Generate Labels for a given sequence
+2022-07-29 12:58:02,925 Data Set ID: 76
+2022-07-29 12:58:02,926 Generate Labels for a given sequence
+2022-07-29 12:58:02,926 Data Set ID: 77
+2022-07-29 12:58:02,927 Generate Labels for a given sequence
+2022-07-29 12:58:02,927 Data Set ID: 78
+2022-07-29 12:58:02,927 Generate Labels for a given sequence
+2022-07-29 12:58:02,928 Data Set ID: 79
+2022-07-29 12:58:02,928 Generate Labels for a given sequence
+2022-07-29 12:58:02,928 Data Set ID: 80
+2022-07-29 12:58:02,929 Generate Labels for a given sequence
+2022-07-29 12:58:02,929 Data Set ID: 81
+2022-07-29 12:58:02,930 Generate Labels for a given sequence
+2022-07-29 12:58:02,930 Data Set ID: 82
+2022-07-29 12:58:02,931 Generate Labels for a given sequence
+2022-07-29 12:58:02,931 Data Set ID: 83
+2022-07-29 12:58:02,931 Generate Labels for a given sequence
+2022-07-29 12:58:02,932 Data Set ID: 84
+2022-07-29 12:58:02,932 Generate Labels for a given sequence
+2022-07-29 12:58:02,932 Data Set ID: 85
+2022-07-29 12:58:02,933 Generate Labels for a given sequence
+2022-07-29 12:58:02,933 Data Set ID: 86
+2022-07-29 12:58:02,934 Generate Labels for a given sequence
+2022-07-29 12:58:02,934 Data Set ID: 87
+2022-07-29 12:58:02,935 Generate Labels for a given sequence
+2022-07-29 12:58:02,935 Data Set ID: 88
+2022-07-29 12:58:02,935 Generate Labels for a given sequence
+2022-07-29 12:58:02,936 Data Set ID: 89
+2022-07-29 12:58:02,936 Generate Labels for a given sequence
+2022-07-29 12:58:02,936 Data Set ID: 90
+2022-07-29 12:58:02,937 Generate Labels for a given sequence
+2022-07-29 12:58:02,937 Data Set ID: 91
+2022-07-29 12:58:02,938 Generate Labels for a given sequence
+2022-07-29 12:58:02,938 Data Set ID: 92
+2022-07-29 12:58:02,939 Generate Labels for a given sequence
+2022-07-29 12:58:02,939 Data Set ID: 93
+2022-07-29 12:58:02,939 Generate Labels for a given sequence
+2022-07-29 12:58:02,940 Data Set ID: 94
+2022-07-29 12:58:02,940 Generate Labels for a given sequence
+2022-07-29 12:58:02,940 Data Set ID: 95
+2022-07-29 12:58:02,941 Generate Labels for a given sequence
+2022-07-29 12:58:02,941 Data Set ID: 96
+2022-07-29 12:58:02,942 Generate Labels for a given sequence
+2022-07-29 12:58:02,942 Data Set ID: 97
+2022-07-29 12:58:02,943 Generate Labels for a given sequence
+2022-07-29 12:58:02,943 Data Set ID: 98
+2022-07-29 12:58:02,943 Generate Labels for a given sequence
+2022-07-29 12:58:02,944 Data Set ID: 99
+2022-07-29 12:58:02,944 Generate Labels for a given sequence
+2022-07-29 12:58:02,944 Data Set ID: 100
+2022-07-29 12:58:02,945 Label Sequence: 99
+2022-07-29 12:58:02,945 ##### LSTM preprocessing End
+2022-07-29 12:58:02,946 Define LSTM model 1 for Sequnced Data
+2022-07-29 12:58:02,946 Feature Length: 21, Label Length: 1
+2022-07-29 12:58:05,211 Manually Calculate R2 Score
+2022-07-29 12:58:05,216 Return Score
+2022-07-29 12:58:05,239 Model Compilation
+2022-07-29 12:58:05,241 Fitting LSTM model
+2022-07-29 12:58:05,241 Sequence Array: (19289, 50, 21)
+2022-07-29 12:58:05,241 Label Array: (19289, 1)
+2022-07-29 12:58:08,134 Manually Calculate R2 Score
+2022-07-29 12:58:08,140 Return Score
+2022-07-29 12:58:11,198 Manually Calculate R2 Score
+2022-07-29 12:58:11,202 Return Score
+2022-07-29 12:58:16,773 Manually Calculate R2 Score
+2022-07-29 12:58:16,780 Return Score
